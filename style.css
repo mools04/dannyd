@@ -93,6 +93,7 @@ img, iframe{
   display: block;
   text-align: left;
   text-decoration: none;
+  font-family: 'arial';
 }
 
 /* Change color of dropdown links on hover */
