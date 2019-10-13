@@ -5,7 +5,7 @@ body{
   background-position-x: right;
   background-position-y: top;
 }
-
+/*defining fonts*/
 @font-face{ 
   font-family: 'pantonb';
   src: url('PantonDemo-Black.otf');
@@ -14,7 +14,8 @@ body{
   font-family: 'pantonl';
   src: url('PantonDemo-Light.otf');
 }
-#mainsite{
+/*aligning everything to centre*/
+body{
 	text-align: center;
 }
 h1{
@@ -23,18 +24,55 @@ h1{
   background-size: 100px;
   color: white;
   font-family: 'pantonb';
+  text-decoration: none;
+}
+h2{
+  text-align: left;
+  font-size: 30px; 
+  background-size: 100px;
+  color: white;
+  font-family: 'pantonb';
+  text-decoration: none;
+}
+a{
+  text-decoration: none;
 }
 p{
 	font-size: 16px;
   color: white;
   font-family: 'pantonl';
-
+  font-weight: bold;
+}
+.para{
+  text-align: left;
+  background-color: #5e91ff;
+  border-radius: 12px;
+  padding: 10px;
+  opacity: 50%;
 }
 img, iframe{
-  padding: 10px;
-  background-color: lightblue;
-  display: round;
-  border-radius: 12px;
+  padding: 1px;
+  background-color: white;
+  border-radius: 10px;
+}
+/*keyframes for all buttons*/
+@keyframes buttonA{
+  to{
+    background-color: black;
+    background-image: none;
+  }
+}
+@keyframes buttonB{
+  to{
+    background-image: none;
+    background-color: black;
+  }
+}
+@keyframes buttonC{
+  to{
+    background-color: black;
+    background-image: none;
+  }
 }
 .button{
 	border: none;
@@ -45,16 +83,37 @@ img, iframe{
 	cursor: pointer;
 	font-size: 16px;
   border-radius: 12px;
-  background-image: linear-gradient(-90deg, lightblue, blue);
   font-family:'pantonl';
+  background-color: #5e91ff;
 }
+/*hover animation*/
 .button:hover, .button:focus{
-  background-image: none;
-  background-color: black;
+  animation-duration: 1s;
+  animation-name: buttonA;
+  animation-fill-mode: forwards;
 }
+a.button1{
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  cursor: pointer;
+  font-size: 16px;
+  border-radius: 12px;
+  font-family:'pantonl';
+  background-color: #5e91ff;
+}
+a.button1:hover, a.button1:focus{
+  animation-duration: 1s;
+  animation-name: buttonC;
+  animation-fill-mode: forwards;
+}
+
 /* Dropdown Button */
 .dropbtn {
-  background-image: linear-gradient(-90deg, blue, lightblue);
+  background-color: #5e91ff;
   color: white;
   padding: 15px 32px;
   font-size: 16px;
@@ -64,10 +123,11 @@ img, iframe{
   font-family: 'pantonl';
 }
 
-/* Dropdown button on hover & focus */
+/* Dropdown button on hover & focus + Animations*/
 .dropbtn:hover, .dropbtn:focus {
-  background-image: none;
-  background-color: black;
+  animation-duration: 1s;
+  animation-name: buttonB;
+  animation-fill-mode: forwards;
 }
 
 /* The container <div> - needed to position the dropdown content */
