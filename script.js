@@ -5,8 +5,7 @@ var time = 3000;  // Time Between Switch
 // Image List
 images[0] = "danny1.jpg";
 images[1] = "danny2.jpg";
-images[2] = "danny3.jpg";
-images[3] = "danny4.jpg";
+images[2] = "danny5.png";
 
 // Change Image
 function changeImg(){
@@ -28,14 +27,16 @@ function changeImg(){
 // Run function when page loads
 window.onload=changeImg;
 
-function button(){
-	alert("Because he's hot AF");
-}
 /* When the user clicks on the button,
 toggle between hiding and showing the dropdown content */
 function myFunction() {
   document.getElementById("myDropdown").classList.toggle("show");
 }
+
+function button(){
+  alert("Because he's hot AF");
+}
+
 
 // Close the dropdown menu if the user clicks outside of it
 window.onclick = function(event) {

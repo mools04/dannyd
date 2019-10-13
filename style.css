@@ -1,3 +1,4 @@
+/*background attributes*/
 body{
   background-image: url('background1.png');
   background-attachment: fixed;
@@ -18,6 +19,7 @@ body{
 body{
 	text-align: center;
 }
+/*main heading attributes*/
 h1{
 	text-align: left;
 	font-size: 50px; 
@@ -26,6 +28,7 @@ h1{
   font-family: 'pantonb';
   text-decoration: none;
 }
+/*subheading attributes*/
 h2{
   text-align: left;
   font-size: 30px; 
@@ -34,46 +37,54 @@ h2{
   font-family: 'pantonb';
   text-decoration: none;
 }
-a{
-  text-decoration: none;
+/*makes the link underlined when hovering*/
+a.homelink:hover, a.homelink:focus{
+  animation-name: link;
+  animation-duration: 1s;
+  animation-fill-mode: forwards;
 }
+@keyframes link{
+  from{
+    text-decoration: none;
+  }
+  to{
+    text-decoration: underline;
+  }
+}
+/*this sets all paragraphs to the Panton font*/
 p{
 	font-size: 16px;
   color: white;
   font-family: 'pantonl';
   font-weight: bold;
 }
+/*no underline/colouring for links*/
+a{
+  text-decoration: none;
+  color: white;
+}
+/*attributes for "About Danny" paragraph*/
 .para{
   text-align: left;
-  background-color: #5e91ff;
-  border-radius: 12px;
+  background: rgba(0, 0, 0, 0.55);
   padding: 10px;
-  opacity: 50%;
+  border-radius: 12px;
 }
+/*styling pictures and video*/
 img, iframe{
   padding: 1px;
   background-color: white;
   border-radius: 10px;
 }
 /*keyframes for all buttons*/
-@keyframes buttonA{
+@keyframes buttons{
   to{
     background-color: black;
     background-image: none;
   }
 }
-@keyframes buttonB{
-  to{
-    background-image: none;
-    background-color: black;
-  }
-}
-@keyframes buttonC{
-  to{
-    background-color: black;
-    background-image: none;
-  }
-}
+
+/*first button*/
 .button{
 	border: none;
 	color: white;
@@ -88,10 +99,10 @@ img, iframe{
 }
 /*hover animation*/
 .button:hover, .button:focus{
-  animation-duration: 1s;
-  animation-name: buttonA;
+  animation: buttons 1s;
   animation-fill-mode: forwards;
 }
+/*second button*/
 a.button1{
   border: none;
   color: white;
@@ -105,9 +116,10 @@ a.button1{
   font-family:'pantonl';
   background-color: #5e91ff;
 }
+/*hover animation*/
 a.button1:hover, a.button1:focus{
   animation-duration: 1s;
-  animation-name: buttonC;
+  animation-name: buttons;
   animation-fill-mode: forwards;
 }
 
@@ -126,7 +138,7 @@ a.button1:hover, a.button1:focus{
 /* Dropdown button on hover & focus + Animations*/
 .dropbtn:hover, .dropbtn:focus {
   animation-duration: 1s;
-  animation-name: buttonB;
+  animation-name: buttons;
   animation-fill-mode: forwards;
 }
 
